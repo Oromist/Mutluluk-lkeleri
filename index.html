@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mutluluk Entropi Testi</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      color: #222;
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    h1, h2 {
+      color: #3b3b3b;
+      text-align: center;
+    }
+    .question {
+      margin-bottom: 20px;
+    }
+    .question p {
+      font-weight: bold;
+    }
+    .options label {
+      margin-right: 10px;
+    }
+    button {
+      background-color: #222;
+      color: #fff;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      display: block;
+      margin: 20px auto;
+    }
+    #result {
+      margin-top: 30px;
+      padding: 20px;
+      border: 2px solid #ccc;
+      border-radius: 8px;
+      background-color: #fff;
+    }
+    .book-promo {
+      margin-top: 40px;
+      text-align: center;
+    }
+    .book-promo img {
+      width: 150px;
+      margin-bottom: 15px;
+    }
+    .book-promo a {
+      display: inline-block;
+      margin-top: 10px;
+      text-decoration: none;
+      background-color: #0077cc;
+      color: white;
+      padding: 10px 18px;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Mutluluk Entropi Testi</h1>
+  <form id="entropyForm">
+    <div class="question">
+      <p>1. Kendime karşı çoğu zaman dürüstüm, kendimi kandırmam.</p>
+      <div class="options">
+        <label><input type="radio" name="q1" value="1" required>1</label>
+        <label><input type="radio" name="q1" value="2">2</label>
+        <label><input type="radio" name="q1" value="3">3</label>
+        <label><input type="radio" name="q1" value="4">4</label>
+        <label><input type="radio" name="q1" value="5">5</label>
+      </div>
+    </div>
+
+    <!-- Soru 2–8 Arası -->
+    <div class="question">
+      <p>2. İşim ya da günlük uğraşlarım hayatıma anlam katıyor.</p>
+      <div class="options">
+        <label><input type="radio" name="q2" value="1" required>1</label>
+        <label><input type="radio" name="q2" value="2">2</label>
+        <label><input type="radio" name="q2" value="3">3</label>
+        <label><input type="radio" name="q2" value="4">4</label>
+        <label><input type="radio" name="q2" value="5">5</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <p>3. Sağlıklı ve samimi ilişkiler kurmak benim için önceliklidir.</p>
+      <div class="options">
+        <label><input type="radio" name="q3" value="1" required>1</label>
+        <label><input type="radio" name="q3" value="2">2</label>
+        <label><input type="radio" name="q3" value="3">3</label>
+        <label><input type="radio" name="q3" value="4">4</label>
+        <label><input type="radio" name="q3" value="5">5</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <p>4. Zorluklar karşısında yıkılmak yerine güçleniyorum.</p>
+      <div class="options">
+        <label><input type="radio" name="q4" value="1" required>1</label>
+        <label><input type="radio" name="q4" value="2">2</label>
+        <label><input type="radio" name="q4" value="3">3</label>
+        <label><input type="radio" name="q4" value="4">4</label>
+        <label><input type="radio" name="q4" value="5">5</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <p>5. İnsanlara sınır koyabilmek benim için doğal ve kolaydır.</p>
+      <div class="options">
+        <label><input type="radio" name="q5" value="1" required>1</label>
+        <label><input type="radio" name="q5" value="2">2</label>
+        <label><input type="radio" name="q5" value="3">3</label>
+        <label><input type="radio" name="q5" value="4">4</label>
+        <label><input type="radio" name="q5" value="5">5</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <p>6. Karar verirken akıl ve mantığı ön planda tutarım.</p>
+      <div class="options">
+        <label><input type="radio" name="q6" value="1" required>1</label>
+        <label><input type="radio" name="q6" value="2">2</label>
+        <label><input type="radio" name="q6" value="3">3</label>
+        <label><input type="radio" name="q6" value="4">4</label>
+        <label><input type="radio" name="q6" value="5">5</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <p>7. Kıskançlık ve başkalarıyla kıyaslama duygusu beni yönetmez.</p>
+      <div class="options">
+        <label><input type="radio" name="q7" value="1" required>1</label>
+        <label><input type="radio" name="q7" value="2">2</label>
+        <label><input type="radio" name="q7" value="3">3</label>
+        <label><input type="radio" name="q7" value="4">4</label>
+        <label><input type="radio" name="q7" value="5">5</label>
+      </div>
+    </div>
+
+    <div class="question">
+      <p>8. Hayatımda mizahın iyileştirici gücüne sıkça başvururum.</p>
+      <div class="options">
+        <label><input type="radio" name="q8" value="1" required>1</label>
+        <label><input type="radio" name="q8" value="2">2</label>
+        <label><input type="radio" name="q8" value="3">3</label>
+        <label><input type="radio" name="q8" value="4">4</label>
+        <label><input type="radio" name="q8" value="5">5</label>
+      </div>
+    </div>
+
+    <button type="submit">Sonucu Göster</button>
+  </form>
+
+  <div id="result"></div>
+
+  <div class="book-promo">
+    <img src="https://m.media-amazon.com/images/I/71RHD4ZRhDL._AC_UF1000,1000_QL80_.jpg" alt="The Saad Truth About Happiness">
+    <h2>The Saad Truth About Happiness</h2>
+    <p>Mutluluk hakkında bilimsel ve gerçekçi bir rehber.</p>
+    <a href="https://www.amazon.com/Saad-Truth-about-Happiness-Secrets/dp/1684514186" target="_blank">📘 Kitabı Satın Al</a>
+  </div>
+
+  <script>
+    document.getElementById("entropyForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      const form = e.target;
+      let total = 0;
+      for (let i = 1; i <= 8; i++) {
+        const val = form["q" + i].value;
+        total += parseInt(val);
+      }
+
+      let message = "";
+      if (total >= 32) {
+        message = "🔒 <strong>Düşük Entropi – Yüksek Mutluluk:</strong> Mutluluk sistemin oldukça stabil. Kendinle barışık, mantıklı ve anlamlı bir hayat sürüyorsun.";
+      } else if (total >= 24) {
+        message = "⚖️ <strong>Orta Düzey Entropi – Dalgalı Mutluluk:</strong> Hayatında bazı eksikler olabilir ama büyük ölçüde dengeyi kurmuşsun.";
+      } else if (total >= 16) {
+        message = "🌪 <strong>Yüksek Entropi – Karışık Mutluluk:</strong> Bazı yönlerden dengeyi kurmakta zorlanıyorsun. Kendi gerçeğine dönmek için iyi bir zaman.";
+      } else {
+        message = "🚨 <strong>Entropi Alarmı!</strong> Mutluluğun çok kırılgan. Kendinle yüzleşmeye ve yeni alışkanlıklar edinmeye açık ol.";
+      }
+
+      document.getElementById("result").innerHTML = `<h2>Sonuç</h2><p>${message}</p>`;
+    });
+  </script>
+</body>
+</html>
